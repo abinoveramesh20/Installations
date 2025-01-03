@@ -1,0 +1,26 @@
+Installing Apache on Ubuntu
+
+Update Package List:
+  sudo apt update
+
+Install Apache:
+  sudo apt install apache2
+
+
+Check Apache Status:
+  sudo systemctl status apache2
+
+
+Enable Apache to Start on Boot:
+  sudo systemctl enable apache2
+
+
+Adjust Firewall to Allow HTTP Traffic:
+  sudo ufw allow 'Apache'
+
+
+Test Apache Configuration:
+  sudo apache2ctl configtest
+
+Restart Apache (if needed):
+  sudo systemctl restart apache2
