@@ -13,7 +13,7 @@ This repository helps you to quickly install and set up a variety of essential t
 8. **PostgreSQL** – A powerful open-source relational database known for its extensibility and standards compliance.
 9. **MongoDB (Version 8)** – A NoSQL database known for its flexibility, scalability, and high performance.
 10. **Microsoft Edge** – A web browser developed by Microsoft, offering improved speed and security features.
-11. **Apache HTTP Server** – A widely-used web server software that serves websites to the internet.
+11. **Apache** – A widely-used web server software that serves websites to the internet.
 12. **Nginx** – A high-performance web server that can be used as a reverse proxy or load balancer.
 
 ---
