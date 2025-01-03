@@ -1,0 +1,38 @@
+MongoDB Version 7.0 Installation on Ubuntu - Short Documentation
+
+Prerequisites:
+Ubuntu system (Focal/20.04 LTS)
+Internet connection
+
+
+Steps:
+
+
+Add Focal Security Repository: Adds the security repository to your package sources.
+echo "deb http://security.ubuntu.com/ubuntu focal-security main" | sudo tee /etc/apt/sources.list.d/focal-security.list
+
+
+Update Package List: Updates the local package list to reflect the new repository.
+sudo apt update
+
+
+Download MongoDB GPG Key: Downloads and stores MongoDB's GPG key to verify the authenticity of the packages.
+wget -qO - https://www.mongodb.org/static/pgp/server-7.0.asc | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-7.gpg
+
+Add MongoDB 7.0 Repository: Adds the official MongoDB 7.0 repository to the sources list.  
+echo "deb [signed-by=/usr/share/keyrings/mongodb-7.gpg] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
+
+
+Update Package List Again: Refreshes the package list with the newly added MongoDB repository.
+sudo apt update
+
+
+Install MongoDB 7.0: Installs MongoDB and its associated components.
+sudo apt install -y mongodb-org
+
+Start MongoDB Service: Starts the MongoDB service.
+sudo systemctl start mongod
+
+
+Enable MongoDB to Start on Boot: Configures MongoDB to start automatically upon system boot.  
+sudo systemctl enable mongod
