@@ -1,1 +1,34 @@
 
+Short Documentation for Installing and Configuring MySQL
+
+
+Step 1: Install MySQL Server
+Update package list:
+  sudo apt update
+
+Install MySQL server:
+  sudo apt install mysql-server
+
+Start MySQL service:
+  sudo systemctl start mysql.service
+
+
+Step 2: Configuring MySQL
+Log in to MySQL as the root user:
+  sudo mysql
+
+Set the root password to root and configure the authentication plugin to use mysql_native_password:   
+  ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
+
+
+Grant all privileges on a specific database (laravel_database) to the root user:   
+  GRANT ALL PRIVILEGES ON laravel_database.* TO 'root'@'localhost';
+
+Exit MySQL:   
+  exit
+
+Log in to MySQL with the new password:
+  mysql -u root -p
+
+Configure root to use auth_socket plugin for secure authentication:   
+  ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
