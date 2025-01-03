@@ -1,0 +1,20 @@
+Installing Zoho Cliq on Ubuntu
+
+Go to the Zoho Cliq Download Page: Open your browser and go to the following link: 
+  https://www.zoho.com/cliq/desktop/linux.html
+Download the .deb File:
+
+Click on the .deb file link to download the Linux version of Zoho Cliq.
+Open Terminal:
+  Press Ctrl+Alt+T to open the terminal.
+
+Navigate to the Downloads Folder:
+  cd ~/Downloads
+
+Install Zoho Cliq: Run the following command to install the .deb file:
+  sudo dpkg -i <yourfilename.deb>
+Replace <yourfilename.deb> with the actual file name of the downloaded Zoho Cliq .deb package.
+
+
+Fix Missing Dependencies (if necessary): If any dependencies are missing, run the following command to resolve them:
+  sudo apt --fix-broken install
