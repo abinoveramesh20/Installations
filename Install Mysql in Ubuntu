@@ -32,3 +32,38 @@ Log in to MySQL with the new password:
 
 Configure root to use auth_socket plugin for secure authentication:   
   ALTER USER 'root'@'localhost' IDENTIFIED WITH auth_socket;
+
+
+
+
+
+MongoDB User Creation and Role Management
+
+Create Admin User:
+use admin
+db.createUser({
+    user: 'root',
+    pwd: 'root',  // Set your password
+    roles: [{ role: 'root', db: 'admin' }]
+})
+
+
+Create ReadWrite User:
+use your_DB  // Replace with the database name
+db.createUser({
+    user: "YourUsername",
+    pwd: "YourPassword",
+    roles: [{ role: "readWrite", db: "your_DB" }]
+})
+
+
+Grant ReadWrite Access to Another Database:
+db.grantRolesToUser("YourUsername", [{ role: "readWrite", db: "yourdbname" }])
+
+This document provides simple steps for creating and managing MongoDB users and their roles.
+
+
+
+
+
+
