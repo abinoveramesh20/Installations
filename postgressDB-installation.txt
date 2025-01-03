@@ -1,0 +1,26 @@
+To install PostgreSQL, set the password for the postgres user (which is the default superuser), and log in to PostgreSQL, follow the steps below.
+
+
+1. Install PostgreSQL
+  sudo apt update
+  sudo apt install postgresql postgresql-contrib
+
+
+2. Set Password for the postgres User
+
+By default, PostgreSQL uses the postgres user for database administration. To set the password for the postgres user:
+  sudo -u postgres psql
+Once you are in the PostgreSQL shell, run the following command to change the password: 
+  ALTER USER postgres WITH PASSWORD 'your_password';
+Replace your_password with the password you want to set for the postgres user.
+
+3. Exit the PostgreSQL Shell by typing:
+\q
+
+4. Log in with the postgres User: 
+To log in to PostgreSQL with the new password, you can run the following command:
+  psql -U postgres -W
+The -U flag specifies the username (postgres in this case), and -W prompts you to enter the password. You will be prompted to enter the password you just set.
+
+5. Verify the Installation and Connection, Once logged in, you can verify the connection and database by running:
+  \l
