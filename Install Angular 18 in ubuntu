@@ -1,0 +1,27 @@
+If You Have Node.js Installed:
+Install Angular CLI 18:
+  sudo npm install -g @angular/cli@18
+
+Create and serve a new Angular project:
+  ng new my-angular-app
+  cd my-angular-app
+  ng serve
+
+  
+
+If You Don't Have Node.js Installed:
+Install Node.js and npm:
+  sudo apt update
+  sudo apt install curl
+  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E   -
+  sudo apt install nodejs
+
+
+Install Angular CLI 18:
+  sudo npm install -g @angular/cli@18
+
+
+Create and serve a new Angular project:
+  ng new my-angular-app
+  cd my-angular-app
+  ng serve
