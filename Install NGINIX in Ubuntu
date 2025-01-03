@@ -1,0 +1,26 @@
+Installing Nginx on Ubuntu
+
+Update the Package List:
+  sudo apt update
+
+
+Install Nginx:
+  sudo apt install nginx
+
+
+Check Nginx Status:
+  sudo systemctl status nginx
+
+Enable Nginx to Start on Boot:
+  sudo systemctl enable nginx
+
+Adjust Firewall to Allow HTTP and HTTPS Traffic:
+  sudo ufw allow 'Nginx Full'
+
+Test Nginx Configuration:
+  sudo nginx -t
+
+Restart Nginx (if needed):
+  sudo systemctl restart nginx
+
+Access Nginx: You can now access your Nginx server by navigating to http://localhost or your server's IP address in a browser.
