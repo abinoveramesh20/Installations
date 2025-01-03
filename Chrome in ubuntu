@@ -1,0 +1,17 @@
+How to Install Chrome on Ubuntu Using GUI
+
+
+Step 1: Open Any Browser and Download .deb package (for Debian/Ubuntu)
+
+Search for Google Chrome on your available browser or directly click on this Google Chrome downloading link.
+https://www.google.com/chrome/?platform=linux
+
+Step 2: Choose Your Options > Click on Accept and Install
+Select the first option 64-bit.deb (for Debian/Ubuntu).
+After that Click on the “Accept and Install” Button.
+
+
+Step 3: Open Terminal 
+cd Downloads/
+sudo dpkg -i <downloaded-filename.deb>
+
