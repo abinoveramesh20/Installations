@@ -15,3 +15,7 @@ Install Node.js 22.x:
 
 Step 4: Verify installation Once the installation is complete, check the installed version:
   node -v  
+
+
+Step 5: Install npm (if not installed) If npm (Node Package Manager) is not installed with Node.js, you can install it manually by running:
+  sudo apt install -y npm
