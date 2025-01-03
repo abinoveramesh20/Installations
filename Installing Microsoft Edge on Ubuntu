@@ -1,0 +1,25 @@
+Installing Microsoft Edge on Ubuntu
+Follow these steps to install Microsoft Edge on your Ubuntu system:
+
+Step 1: Download the .deb Package
+Visit the official Microsoft Edge download page: Microsoft Edge for Linux Download
+Select the Linux option, then download the .deb file for Ubuntu.
+Click Accept and Download to start the download.
+
+Step 2: Open Terminal and Navigate to Downloads
+Open the terminal on your system.
+Navigate to the Downloads directory where the .deb file is located:
+cd ~/Downloads
+
+Step 3: Install the Package
+Install the downloaded .deb package using dpkg:
+sudo dpkg -i <downloaded-filename.deb>
+Replace <downloaded-filename.deb> with the actual filename of the downloaded .deb file.
+
+Step 4: Resolve Dependencies (if needed)
+If you encounter dependency issues, run the following command to fix them:
+sudo apt --fix-broken install
+
+Step 5: Launch Microsoft Edge
+After installation, you can launch Microsoft Edge from the application menu or by running:
+microsoft-edge
