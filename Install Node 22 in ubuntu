@@ -1,0 +1,17 @@
+To install Node.js version 22 on Ubuntu, follow these steps:
+
+Step 1: Update the package list
+  sudo apt update
+
+Step 2: Install prerequisites (Make sure you have the required dependencies installed for adding repositories).
+  sudo apt install -y curl gnupg2 lsb-release ca-certificates
+
+
+Step 3: Add NodeSource repository, To install Node.js version 22, you need to use the official NodeSource repository. Add NodeSource repository for Node.js 22.x: 
+  curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E   -
+
+Install Node.js 22.x:
+  sudo apt install -y nodejs
+
+Step 4: Verify installation Once the installation is complete, check the installed version:
+  node -v  
