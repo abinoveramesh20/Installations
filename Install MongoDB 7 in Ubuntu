@@ -63,4 +63,14 @@ db.grantRolesToUser("username", [{ role: "readWrite", db: "realworld_staging" }]
 
 
 
+## # Enable REMOTE  ACCESS
+
+1. Update the bindIp property in mongod.conf
+Allow access from any IP (less secure and not recommended)
+net:
+  port: 27017 // or any other custom port
+   bindIp: 0.0.0.0,<your private ip>,<your public ip>
+
+2. Restart mongod service
+sudo systemctl restart mongod.service
 
