@@ -29,3 +29,38 @@ sudo systemctl start mongod
 
 8. Enable MongoDB to Start on Boot: Configures MongoDB to start automatically upon system boot.  
 sudo systemctl enable mongod
+
+
+##USER CREATION
+
+ mongodb user setup:
+
+1. Create Root user 
+
+use admin
+db.createUser(
+  {
+    user: 'root',
+    pwd: 'root',
+    roles: [ { role: 'root', db: 'admin' } ]
+  }
+);
+
+
+
+2. Create READ WRITE USER
+
+db.createUser({
+    user: "yourusername",
+    pwd: "yourpass",
+    roles: [{ role: "readWrite", db: "yourdbname" }]
+})
+
+
+3. Update readwrite access to another also:
+
+db.grantRolesToUser("username", [{ role: "readWrite", db: "realworld_staging" }])
+
+
+
+
