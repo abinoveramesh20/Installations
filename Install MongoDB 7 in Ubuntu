@@ -63,7 +63,7 @@ db.grantRolesToUser("username", [{ role: "readWrite", db: "realworld_staging" }]
 
 
 
-## # Enable REMOTE  ACCESS
+## ENABLE REMOTE  ACCESS
 
 1. Update the bindIp property in mongod.conf
 Allow access from any IP (less secure and not recommended)
