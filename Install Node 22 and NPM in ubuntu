@@ -8,7 +8,7 @@ Step 2: Install prerequisites (Make sure you have the required dependencies inst
 
 
 Step 3: Add NodeSource repository, To install Node.js version 22, you need to use the official NodeSource repository. Add NodeSource repository for Node.js 22.x: 
-  curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E   -
+  curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash  -
 
 Install Node.js 22.x:
   sudo apt install -y nodejs
